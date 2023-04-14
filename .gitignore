@@ -1,0 +1,7 @@
+.idea
+ansible/venv
+examples/*/roles
+molecule/*/venv
+.vagrant
+*/test-bitcoin.conf
+*/.vscode

@@ -1,0 +1,48 @@
+---
+# LND user management
+lnd_user: lnd
+lnd_group: lnd
+
+# LND binary information
+lnd_version: 0.15.0-beta
+lnd_arch: linux-amd64
+
+# LND maintainers GPG public keys. Name must match the ones found here:
+# https://github.com/lightningnetwork/lnd/tree/master/scripts/keys
+lnd_pgp_keys:
+  - roasbeef
+  - guggero
+  - bhandras
+
+# LND node configuration
+lnd_data_dir: /data/lnd
+lnd_network: mainnet
+lnd_alias: fooock
+lnd_log_level: info
+lnd_listen: 127.0.0.1
+lnd_tls_extra_domain: "{{ ansible_hostname }}"
+
+# If LND and bitcoind are in the same machine, this field
+# should be true, otherwise false. Configure `bitcoind_rpc`
+# if connection is remote.
+lnd_bitcoind_local: true
+
+# This data is only going to be used when `lnd_bitcoind_local` is set to
+# true. This is useful when LND and bitcoind lives in the same machine.
+lnd_bitcoind_dir: /data/bitcoin
+lnd_bitcoind_config: /etc/bitcoin/bitcoin.conf
+
+# This data is only going to be used in the case that `lnd_bitcoind_local`
+# is set to false. Otherwise, the connection from LND to bitcoind is set to
+# 'local'.
+lnd_bitcoind_rpc_host: 127.0.0.1
+lnd_bitcoind_rpc_user: yourbtc
+lnd_bitcoind_rpc_password: yourbtc
+
+# Whether the databases used within lnd should automatically be compacted on
+# every startup
+lnd_bolt_auto_compact: true
+lnd_bolt_auto_compact_min_age: 48h
+
+lnd_tor_active: false
+lnd_watchtower_active: false
