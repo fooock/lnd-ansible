@@ -4,7 +4,7 @@ Ansible role to install the Lightning Network Daemon ([LND](https://github.com/l
 service. By default, it uses sane defaults and some hardening measures for the Systemd service.
 
 By default, all binaries are installed inside `/usr/local/lnd-<version>/` directory. So for example, if you are
-installing the version `v0.15.0-beta`, if you want to invoke the `lncli` binary, you will need to use `/usr/local/lnd-v0.15.0-beta/lncli`.
+installing the version `v0.16.0-beta`, if you want to invoke the `lncli` binary, you will need to use `/usr/local/lnd-v0.16.0-beta/lncli`.
 
 ### Requirements
 
@@ -53,7 +53,7 @@ Lightning daemon node are the following ones:
 |---------------------|-----------------------------|
 | `lnd_user`    	     | `lnd`          	            |
 | `lnd_group`   	     | `lnd`          	            |
-| `lnd_version` 	     | `0.15.0-beta`             	 |
+| `lnd_version` 	     | `0.16.0-beta`             	 |
 | `lnd_arch`    	     | `linux-amd64` 	             |
 
 > If you want to install LND into a Raspberry you need to change the architecture to `linux-aarch64`.
