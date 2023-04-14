@@ -28,7 +28,12 @@ Create a playbook like this one:
       become: yes
 ```
 
-Note that you can use `become` at a global level instead at the role level.
+Note that you can use `become` at a global level instead at the role level. Now you can execute
+your playbook executing:
+
+```shell
+ansible-playbook -i $VM_TARGET_IP, -u $VM_TARGET_USER --ask-become-pass playbook.yml
+```
 
 ### Testing
 
