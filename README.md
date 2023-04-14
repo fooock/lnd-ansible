@@ -1,5 +1,7 @@
 # Ansible LND role
 
+![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/fooock/lnd-ansible/ansible.yml?branch=main&label=Ansible%20Tests&logo=github&style=for-the-badge)
+
 Ansible role to install the Lightning Network Daemon ([LND](https://github.com/lightningnetwork/lnd)) as a `systemd`
 service. By default, it uses sane defaults and some hardening measures for the Systemd service.
 
