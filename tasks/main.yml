@@ -35,6 +35,7 @@
     name: "{{ lnd_user }}"
     group: "{{ lnd_group }}"
     state: present
+    shell: /bin/bash
     password: "*"
 
 - name: "LND | Download LND v{{ lnd_version }} into '/tmp/lnd-{{ lnd_arch }}-{{ lnd_version }}.tar.gz'"
